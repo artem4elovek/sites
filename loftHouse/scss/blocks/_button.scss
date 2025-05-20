@@ -1,0 +1,81 @@
+.button {
+    color: var(--color-light);
+    padding: 12px 54px 11px;
+
+    &--accent {
+        background-color: var(--color-accent);
+    }
+}
+
+.burger-button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    /* сбросил стиль по умолчанию */
+    height: 48px;
+    width: 48px;
+    position: relative;
+
+
+    &:hover {
+        background-color: var(--color-accent);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* центрирование по центру */
+        width: 50%;
+        height: 2px;
+        background-color: var(--color-light);
+        border-radius: var(--border-radius-small);
+        box-shadow: 0 -8px, 0 8px;
+    }
+}
+
+
+.cross-button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    /* сбросил стиль по умолчанию */
+    width: 48px;
+    height: 48px;
+    position: relative;
+    border-radius: var(--border-radius-small);
+
+
+    &:hover {
+        background-color: var(--color-accent);
+    }
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 7px;
+        width: 70%;
+        height: 2px;
+        background-color: var(--color-light);
+        border-radius: var(--border-radius-small);
+        /* что бы выставить крестик на одном и том же фоне что и бургер кнопку я сделал  */
+    }
+
+    &::after {
+        rotate: 45deg;
+    }
+
+    &::before {
+        rotate: -45deg;
+    }
+}

@@ -1,0 +1,45 @@
+.mobile-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 14px 20px !important;
+    border: none !important;
+    box-sizing: border-box;
+    background-color: var(--color-dark-alt);
+
+
+    /* Для модального режима */
+    &:modal {
+        position: fixed !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        max-height: none !important;
+    }
+
+    /* Контейнер контента */
+    &__body {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Кнопка закрытия */
+    &__close-button-wrapper {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 80vh;
+        row-gap: 30px;
+    }
+}

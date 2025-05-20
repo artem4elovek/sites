@@ -1,0 +1,65 @@
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 50px;
+    grid-auto-columns: 255px;
+
+    gap: 35px 30px;
+
+    &-contacts {
+        display: contents;
+
+        &-input {
+            padding-inline: 10px;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.2);
+
+
+            &::placeholder {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+
+                translate: -50% -50%;
+                color: #BEBEBE;
+            }
+        }
+    }
+
+    &-text {
+        font-size: 13px;
+        text-align: center;
+    }
+
+
+    &--inline {
+        grid-template-columns: repeat(4, 1fr);
+
+        .form-text {
+            order: -1;
+        }
+
+        @include desktop {
+            grid-template-columns: repeat(2, 1fr);
+
+            .form-text {
+                order: 0;
+            }
+
+        }
+    }
+
+    @include mobile-s {
+        grid-template-columns: 1fr;
+
+        &--inline {
+            grid-template-columns: 1fr;
+        }
+            .form-text {
+                order: 1;
+            }
+        }
+
+
+
+    }

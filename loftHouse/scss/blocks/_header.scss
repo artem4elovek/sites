@@ -1,0 +1,104 @@
+.header {
+    --min-height-header: 840px;
+    padding-top: 30px;
+    padding-bottom: 74px;
+    min-height: var(--min-height-header);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background:
+        linear-gradient(180.00deg,
+            rgb(36, 43, 51) 11.979%,
+            rgba(45, 52, 60, 0.38) 51.042%,
+            rgb(36, 43, 51) 92.188%),
+        url("../img/bg/header-bg.jpeg");
+
+
+
+
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__logo {
+        flex-shrink: 0;
+    }
+
+    &__menu {
+        padding-left: 40px;
+
+        &-list {
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-item {
+            transition-duration: var(--transition-duration);
+
+            &:hover a {
+                color: var(--color-accent);
+            }
+        }
+
+        &-link {
+            padding: 10px 20px;
+        }
+    }
+
+    &__content,
+    &__footer {
+        max-width: 596px;
+        width: 100%;
+        color: var(--color-accent);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 81px;
+
+        &-title {
+            text-align: center;
+            font-size: 48px;
+            font-family: var(--font-family-accent);
+            font-weight: bold;
+        }
+
+        & svg {
+            fill: var(--color-accent);
+        }
+    }
+
+    &__footer {
+
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        column-gap: 97px;
+
+        &-location,
+        &-number {
+            display: flex;
+            column-gap: 14px;
+
+            & svg {
+                fill: var(--color-light);
+            }
+        }
+
+        @include mobile{
+            flex-direction: column;
+             align-items: center;
+            row-gap: 30px;
+        }
+    }
+
+}

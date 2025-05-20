@@ -1,0 +1,27 @@
+.map{
+    padding-top: 180px;
+    padding-bottom: 180px;
+    position: relative;
+    &__title{
+        color: var(--color-accent);
+        font-size: 36px;
+        padding-bottom: 88px;
+    }
+    &__body{
+        height: 358px;
+        background-color: #626262;
+    }
+
+     &::after {
+        content: "V";
+        position: absolute;       
+        left: 0;
+        bottom:22%;
+        z-index: -1;
+        
+        transform: translate(-50%);
+        opacity: 0.02;
+        font-size: 400px;
+        font-family: var(--font-family-accent);
+    }
+}

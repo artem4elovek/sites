@@ -1,0 +1,44 @@
+.benefits {
+    position: relative;
+    padding: 120px 0px;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        column-gap: 70px;
+        row-gap: 20px;
+        text-align: center;
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
+
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 53px;
+        font-size: 20px;
+        font-family: var(--font-family-font-secondary);
+
+        & svg {
+            color: var(--color-accent);
+            fill: var(--color-accent);
+        }
+    }
+
+    &::after {
+        content: "II";
+        position: absolute;
+        line-height: 1.15;
+        right: 0;
+        top: 0;
+        transform: translate(50%);
+        opacity: 0.02;
+        font-size: 400px;
+        font-family: var(--font-family-accent);
+    }
+}

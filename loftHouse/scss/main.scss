@@ -1,0 +1,21 @@
+//base
+@import 'base/reset',
+'base/media',
+'base/base';
+
+@import'abstracts/fonts',
+ 'abstracts/vars';
+
+
+@import 
+'blocks/button',
+'blocks/form',
+'blocks/mobile-overlay',
+'blocks/header',
+'blocks/benefits',
+'blocks/apartments',
+'blocks/see',
+'blocks/video',
+'blocks/map',
+'blocks/feedback',
+'blocks/footer';

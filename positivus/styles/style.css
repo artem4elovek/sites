@@ -1,0 +1,1779 @@
+:root {
+    --color-dark: #191A23;
+    --color-dark-alt: #292A32;
+    --color-light: #ffffff;
+    --color-accent: #B9FF66;
+    --color-gray: #F3F3F3;
+    --color-gray-alt: #898989;
+
+    --border: 1px solid var(--color-dark);
+    --border-radius: 14px;
+    --border-radius-small: 7px;
+    --border-radius-large: 45px;
+
+    --shadow: 0 5px 0 0 var(--color-dark);
+
+    --font-family-base: 'Space Grotesk', sans-serif;
+
+    --container-width: 1240px;
+    --container-padding-x: 20px;
+    /*отступы в мобильной версии сайта*/
+
+    --section-padding-y: 70px;
+    /*70px; общее расстояние между блоками 140пк так что если сделать у каждого блока по 70 между будет 140 */
+
+    --input-height: 59px;
+    /*высота полей ввода name email и тд */
+    --button-height: 68px;
+
+    --transition-duration: 0.2s;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    font-family: var(--font-family-base);
+    font-weight: 400;
+
+    font-size: 18px;
+    /* на пк 18 на телефоне 16 размер обычного текста */
+
+    /* размер и вес текста такой так как в большинстве случаев на сайте он именно такой */
+    line-height: 1.28;
+    /*  line-height: 1.28; на макете везде он нормал но браузеры меняют этот нормал как хотят по этому коэффициент взят из гугла */
+    color: var(--color-dark);
+    /* цвет текста на сайте */
+    background-color: var(--color-light);
+    /* цвет заднего фона на сайте */
+}
+
+blockquote {
+    margin: 0 !important;
+}
+
+fieldset,
+address {
+    margin-left: 0;
+    padding: 0;
+    border: none;
+}
+
+
+
+
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    /* текст будет наследоваться от родителя body в данном случае*/
+}
+
+ul,
+ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* ниже h заголовки расписаны в тз макета */
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+.h1 {
+    font-size: 60px;
+    /* на пк 60 на телефоне 43 */
+}
+
+h2,
+.h2 {
+    font-size: 40px;
+    /* на пк 40 на телефоне 36 */
+}
+
+h3,
+.h3 {
+    font-size: 30px;
+    /* на пк 30 на телефоне 26 */
+}
+
+h4,
+.h4 {
+    font-size: 20px;
+    /* на пк 20 на телефоне 18 */
+}
+
+
+
+p {
+    margin-block: 0;
+}
+
+
+
+.header {
+    padding-top: 60px;
+
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x)* 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+
+.header__menu {
+    margin-left: auto;
+    font-size: 20px;
+}
+
+.header__menu__list {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.header__menu__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 48px;
+}
+
+.header__menu__link::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50%;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition-duration: inherit;
+}
+
+.header__menu__link:hover:after {
+    width: 100%;
+}
+
+
+.button {
+    display: inline-flex;
+    padding-inline: 35px;
+    align-items: center;
+    justify-content: center;
+    height: var(--button-height);
+    padding-inline: 35px;
+    font-size: 20px;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+
+.button:hover {
+    color: var(--color-dark);
+    background-color: var(--color-accent);
+}
+
+.button--accent {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+}
+
+.button--accent:hover {
+    color: var(--color-accent);
+    background-color: var(--color-dark);
+}
+
+.button--transparent {
+    color: var(--color-dark);
+    background-color: transparent;
+}
+
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+    /* узнать про эти букавы */
+}
+
+/* Полное переопределение встроенных стилей */
+.mobile-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 14px 20px !important;
+    border: none !important;
+    box-sizing: border-box;
+}
+
+/* Для модального режима */
+.mobile-overlay:modal {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+}
+
+/* Контейнер контента */
+.mobile-overlay__body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+/* Кнопка закрытия */
+.mobile-overlay__close-button-wrapper {
+    display: flex;
+    justify-content: end;
+}
+
+.cross-button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    /* сбросил стиль по умолчанию */
+    width: 48px;
+    height: 48px;
+    position: relative;
+    border-radius: var(--border-radius-small);
+}
+
+.cross-button:hover {
+    background-color: var(--color-accent);
+}
+
+.cross-button::after,
+.cross-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    width: 70%;
+    height: 2px;
+    background-color: var(--color-dark);
+    border-radius: var(--border-radius-small);
+    /* что бы выставить крестик на одном и том же фоне что и бургер кнопку я сделал  */
+}
+
+.cross-button::after {
+    rotate: 45deg;
+}
+
+.cross-button::before {
+    rotate: -45deg;
+}
+
+.mobile-overlay__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+    row-gap: 30px;
+}
+
+.section {
+    padding-block: var(--section-padding-y);
+}
+
+.section--hidden-x {
+    overflow-x: hidden;
+}
+
+.section__header {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.section__header:not(:last-child) {
+    margin-bottom: 80px;
+}
+
+
+.section__description {
+    max-width: 580px;
+}
+
+.color-accent-bg {
+    padding-inline: 7px;
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius-small);
+}
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--section-padding-y);
+}
+
+.hero__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    column-gap: 30px;
+    /* рандомное значение просто что бы блоки не слипались при сближении контейнеров */
+
+}
+
+.hero__body {
+    max-width: 531px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* что бы блок не растягивался на всю ширину и не приплющивал кнопку */
+    row-gap: 35px;
+}
+
+.hero__description {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.hero__partners-list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 37px;
+    /* отступ взят из мобильной версии  */
+}
+
+.hero__partners-img {
+    filter: grayscale(1);
+    /* сделали логотипы черно белыми */
+}
+
+.grid {
+    --gridColumns: 1;
+    display: grid;
+    grid-template-columns: repeat(var(--gridColumns), 1fr);
+    gap: 40px;
+}
+
+.grid--1 {
+    --gridColumns: 1;
+}
+
+.grid--2 {
+    --gridColumns: 2;
+}
+
+.grid--3 {
+    --gridColumns: 3;
+}
+
+.grid--4 {
+    --gridColumns: 4;
+}
+
+.grid--5 {
+    --gridColumns: 5;
+}
+
+.grid--6 {
+    --gridColumns: 6;
+}
+
+.grid--7 {
+    --gridColumns: 7;
+}
+
+.grid--8 {
+    --gridColumns: 8;
+}
+
+.grid--9 {
+    --gridColumns: 9;
+}
+
+.grid--10 {
+    --gridColumns: 10;
+}
+
+.grid--11 {
+    --gridColumns: 11;
+}
+
+.grid--12 {
+    --gridColumns: 12;
+}
+
+/* тут я сделал 1 grid класс с использованием константы которую пере определяю по своему усмотрению тут может быть меньше классов но я сделал столько сколько по видео нужно  */
+
+.service__list:not(:last-child) {
+    margin-bottom: 100px;
+}
+
+.service-card {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    /* пробел взят из головы потому что на макете он слишком большой */
+    min-height: 310px;
+    padding: 50px;
+    background-color: var(--color-gray);
+    border: var(--border);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow);
+}
+
+.service-card__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+.service-card__img {
+    align-self: center;
+}
+
+.service-card__title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.service-card__link {
+    --serviceCardLinkIconColor: var(--color-accent);
+    display: inline-flex;
+    align-items: center;
+    column-gap: 15px;
+    font-size: 20px;
+}
+
+.service-card__link:hover {
+    opacity: 0.7;
+}
+
+.service-card__link--light {
+    --serviceCardLinkIconColor: var(--color-dark);
+    color: var(--color-light);
+
+}
+
+.service-card__link-icon-wrapper svg,
+.service-card__link-icon-wrapper svg path {
+    color: var(--serviceCardLinkIconColor);
+    fill: var(--serviceCardLinkIconColor);
+}
+
+/* можно тут не городить ерунды константами а просто взять и у враппера оставить свг патх так как свг у меня уже зеленый но как то что возможно сделать я это и оставил */
+
+
+.service-card__link-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41px;
+    aspect-ratio: 1;
+    background-color: currentColor;
+    border-radius: 50%;
+}
+
+.service-card--accent-bg {
+    background-color: var(--color-accent);
+}
+
+.service-card--dark-bg {
+    background-color: var(--color-dark);
+}
+
+.color-accent-bg--light {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+.banner {
+    --bannerImageOffsetY: 24px;
+
+    box-sizing: content-box;
+    padding-block: var(--bannerImageOffsetY);
+
+
+}
+
+.banner__inner {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius-large);
+}
+
+.banner__body {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 26px;
+}
+
+.banner__description {
+    max-width: 500px;
+}
+
+.banner__img {
+    margin-block: calc(var(--bannerImageOffsetY)* -1) !important;
+}
+
+/* .studies {
+    padding: 70px 60px;
+} */
+
+.studies__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.studies__item {
+    --studiesItemPaddingX: 64px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+}
+
+
+
+.studies__link {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 15px;
+    font-size: 20;
+    line-height: 1.4;
+    color: var(--color-accent);
+}
+
+.studies__link:hover {
+    opacity: 0, 7;
+}
+
+
+.process {}
+
+.process__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    counter-reset: custom-counter;
+    /* сохраняем в переменную порядковый номер списка */
+    list-style: none;
+}
+
+.process__item {
+    --counterContent: counter(custom-counter);
+    counter-increment: custom-counter;
+    /* применяем заранее сохраненное значение */
+}
+
+.process__item:nth-child(-n + 9) {
+    --counterContent: '0'counter(custom-counter);
+    /* для первых 9 элементов ставим 0 в начале  */
+}
+
+.process__accordion-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 25px;
+
+}
+
+.process__accordion-title::before {
+    content: var(--counterContent);
+    font-size: 2em;
+    /* в два раза больше родного текста */
+}
+
+.process__accordion {
+    --indicatorVerticalRotate: 90deg;
+
+    padding: 40px 60px;
+    background-color: var(--color-gray);
+    border: var(--border);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow);
+    transition-duration: var(--transition-duration);
+
+}
+
+.process__accordion[open],
+.process__accordion:hover {
+    background-color: var(--color-accent);
+}
+
+.process__accordion[open] {
+    --indicatorVerticalRotate: 0deg
+}
+
+/* .process__accordion[open] .process__accordion-indicator::after {
+    rotate: 0deg;
+}
+
+.process__accordion-indicator::after {
+    rotate: 90deg;
+}   
+было до переменной   --indicatorVerticalRotate 
+*/
+
+
+
+.process__accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+    cursor: pointer;
+    user-select: none;
+    /* не дает выделить текст при нажатии */
+}
+
+.process__accordion-indicator {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    aspect-ratio: 1;
+    background-color: var(--color-gray);
+    border: var(--border);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.process__accordion-indicator::before,
+.process__accordion-indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 45%;
+    height: 10%;
+    /* ширина круга 58  делим на  18 ширина полоски по макету высота 58 делим на  6 по макету = 18/58*100 = 30% оказался маловат увеличили на глаз до 45 6/58*100~= 10 */
+    background-color: var(--color-dark);
+
+}
+
+.process__accordion-indicator::after {
+    rotate: var(--indicatorVerticalRotate);
+    transition-duration: var(--transition-duration)
+}
+
+.process__accordion-body {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: var(--border);
+}
+
+
+
+.team {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.team__button {
+    align-self: end;
+    min-width: 269px;
+}
+
+
+
+
+
+.team-card {
+    padding: 40px 35px;
+    border: var(--border);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow);
+    height: 100%;
+}
+
+.team-card__header {
+    display: flex;
+
+}
+
+.team-card__img:not(:last-child) {
+    margin-right: 20px;
+}
+
+.team-card__info {
+    align-self: end;
+}
+
+.team-card__info:not(:last-child) {
+    margin-right: 10px;
+}
+
+.team-card__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    aspect-ratio: 1;
+    margin-left: auto;
+    align-self: start;
+    color: var(--color-accent);
+    background-color: var(--color-dark);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.team-card__name:not(:last-child) {
+    margin-bottom: 3px;
+}
+
+
+.team-card__body {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: var(--border);
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    row-gap: 110px;
+    padding-top: 84px;
+    padding-bottom: 54px;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    border-radius: var(--border-radius-large);
+    overflow-x: hidden;
+}
+
+.reviews__slider {
+    --reviewsSliderSlideWidth: 606px;
+
+}
+
+.reviews__slider-list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+}
+
+.reviews__slider-item {
+    scroll-snap-align: start;
+    min-width: var(--reviewsSliderSlideWidth);
+}
+
+.review-card {
+    --reviewCardCornerWidth: 40px;
+    --reviewCardCornerOffsetLeft: 52px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+}
+
+.review-card__body {
+    position: relative;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--border-radius-large);
+    padding: 48px var(--reviewCardCornerOffsetLeft) 52px;
+}
+
+.review-card__body::after {
+    content: '';
+    width: var(--reviewCardCornerWidth);
+    aspect-ratio: 1;
+    border: inherit;
+    background-color: var(--color-dark);
+    rotate: 45deg;
+    position: absolute;
+    top: 100%;
+    left: var(--reviewCardCornerOffsetLeft);
+    translate: 0 -50%;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    /* есть сайт по правильной настройке этих цифр*/
+}
+
+.review-card__footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: calc(var(--reviewCardCornerOffsetLeft) + var(--reviewCardCornerWidth) / 2);
+    /* таким образом я сделал что бы уголок указывал на текст ровно */
+}
+
+.review-card__name,
+.review-card__company {
+    font-size: normal;
+}
+
+.review-card__name {
+    color: var(--color-accent);
+}
+
+.reviews__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 564px;
+    margin-inline: auto;
+}
+
+
+.reviews__arrow-button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    aspect-ratio: 1;
+
+}
+
+.reviews__arrow-button svg {
+    width: 20px;
+    aspect-ratio: 1;
+    color: var(--color-light);
+    fill: var(--color-light);
+}
+
+.reviews__arrow-button svg path {
+    color: var(--color-light);
+    fill: var(--color-light);
+}
+
+.reviews__arrow-button:hover svg path {
+    color: var(--color-accent);
+    fill: var(--color-accent);
+}
+
+.reviews__arrow-button[disabled] {
+    cursor: not-allowed;
+}
+
+.reviews__arrow-button[disabled] svg path {
+    color: var(--color-dark-alt);
+    fill: var(--color-dark-alt);
+}
+
+.pagination {}
+
+.pagination__list {
+    display: flex;
+    flex-direction: row;
+}
+
+.pagination__button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    aspect-ratio: 1;
+    color: var(--color-light);
+}
+
+.pagination__button:hover svg path {
+    color: var(--color-accent);
+    fill: var(--color-accent);
+}
+
+.is-current svg path {
+    color: var(--color-accent);
+    fill: var(--color-accent);
+}
+
+
+
+
+.contact-us {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.contact-us::after {
+    --contactUsImageOffsetY: 62px;
+    /* отступ от верха и низа блока */
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    translate: -50% -50%;
+    height: calc(100% - var(--contactUsImageOffsetY) * 2);
+    aspect-ratio: 1;
+    background: url('../../images/contact-us-bg.svg') center/contain no-repeat;
+}
+
+.contact-us__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.field {}
+
+.radios {
+    display: flex;
+    flex-direction: row;
+    column-gap: 35px;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    transition-duration: var(--transition-duration);
+}
+
+.radio:hover {
+    opacity: 0.6;
+}
+
+.radio__emulator {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    aspect-ratio: 1;
+    background-color: var(--color-light);
+    border: var(--border);
+    border-radius: 50%;
+}
+
+.radio__emulator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 60%;
+    aspect-ratio: 1;
+    background-color: var(--color-accent);
+    border-radius: inherit;
+    transition-duration: var(--transition-duration);
+}
+
+
+.radio__input:not(:checked)+.radio__emulator::after {
+    opacity: 0;
+    /* я получается обратился к псевдоэлементу когда инпут чекнут */
+}
+
+
+
+.field {
+    --fieldInputHeight: var(--input-height);
+    --fieldInputTextColor: var(--color-dark);
+    --fieldInputBgColor: var(--color-light);
+    --fieldInputBorderColor: var(--color-dark);
+    --fieldInputPlaceholderColor: var(--color-gray-alt);
+    --fieldInputHoverBgColor: var(--color-accent);
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 5px;
+}
+
+
+.field__label {
+    font-size: 16px;
+}
+
+.field__input {
+    width: 100%;
+    height: var(--fieldInputHeight);
+    padding-inline: 30px;
+    border: 1px solid var(--fieldInputBorderColor);
+    border-radius: var(--border-radius);
+    color: var(--fieldInputTextColor);
+    transition-duration: var(--transition-duration);
+    background-color: var(--fieldInputBgColor);
+}
+
+.field--big-height {
+    --fieldInputHeight: var(--button-height);
+}
+
+.field-dark-bg {
+    --fieldInputTextColor: var(--color-accent);
+    --fieldInputBgColor: var(--color-dark-alt);
+    --fieldInputBorderColor: var(--color-light);
+    --fieldInputPlaceholderColor: var(--color-light);
+    --fieldInputHoverBgColor: var(--color-dark);
+}
+
+.field__input:hover {
+    background-color: var(--fieldInputHoverBgColor);
+}
+
+.field__input:focus {
+    background-color: var(--color-accent);
+    outline: none;
+}
+
+.field__input::placeholder {
+    color: var(--fieldInputPlaceholderColor);
+}
+
+.field__input--textarea {
+    height: 190px;
+    padding-block: 18px;
+    resize: none;
+}
+
+
+.footer {}
+
+.footer__inner {
+    padding: 55px 60px 50px;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+}
+
+.footer__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.footer__navigation:not(:last-child) {
+    margin-bottom: 66px;
+}
+
+
+.footer__soc1als {}
+
+.soc1als {}
+
+.soc1als__list {
+    display: flex;
+    column-gap: 20px;
+}
+
+.soc1als__link {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transition-duration: var(--transition-duration);
+}
+
+.soc1als__link:hover {
+    background-color: var(--color-accent);
+}
+
+.soc1als__link svg {
+    width: 50%;
+    height: 50%;
+    fill: var(--color-dark) !important;
+}
+
+.footer__menu {}
+
+.footer__menu-list {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.footer__menu-link {
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+    text-decoration: underline;
+    transition-duration: var(--transition-duration);
+}
+
+.footer__menu-link:hover {
+    color: var(--color-accent);
+}
+
+.footer__body {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 27px;
+}
+
+.footer__contacts-title {
+    color: var(--color-dark);
+}
+
+.footer__contacts-body {
+    margin: 0;
+    font-style: normal;
+}
+
+.footer__contacts-body p {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.footer__contacts-body a:hover {
+    color: var(--color-accent);
+}
+
+.subscribe-form {
+    display: flex;
+    column-gap: 20px;
+
+    padding: 58px 40px;
+    background-color: var(--color-dark-alt);
+    border-radius: var(--border-radius);
+}
+
+.footer__extra {
+    display: flex;
+    column-gap: 40px;
+}
+
+.footer__subscribe-form {}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1280px) {
+    .header {
+        padding-top: 30px;
+    }
+
+    .header__logo {
+        max-width: 120px;
+    }
+
+    .header__menu__list {
+        column-gap: 20px;
+    }
+
+    .header__menu {
+        font-size: 18px;
+    }
+
+    .header__inner {
+        column-gap: 30px;
+    }
+
+    .header__button {
+        height: 48px;
+        padding-inline: 18px;
+        font-size: 16px;
+
+    }
+
+    .hero__img {
+        max-width: 40%;
+        height: auto;
+    }
+
+    .hero {
+        row-gap: 60px;
+    }
+
+    .service-card__img {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .banner__body {
+        padding: 50px;
+    }
+
+    .banner {
+        --bannerImageOffsetY: 0;
+    }
+
+    .banner__img {
+        max-width: 40%;
+        height: auto;
+    }
+
+    .studies__item {
+        --studiesItemPaddingX: 32px;
+    }
+
+    .grid--3 {
+        --gridColumns: 2;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        row-gap: 22px;
+        width: 100%;
+        max-width: 450px;
+        padding: 30;
+    }
+}
+
+@media (min-width: 1280px) {
+    .studies {
+        padding: 70px 60px;
+    }
+}
+
+
+
+
+
+@media (max-width: 1023px) {
+    :root {
+        --section-padding-y: 50px;
+        font-size: 16px;
+    }
+
+    .header__menu {
+        font-size: 16px;
+    }
+
+    .hero__partners-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 30px;
+
+    }
+
+    .hero__partners-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .grid--2 {
+        --gridColumns: 1
+    }
+
+    .reviews {
+        row-gap: 46px;
+        padding: 30px 30px 46px;
+    }
+
+    .reviews__slider-list {
+        column-gap: 30px;
+    }
+
+
+    .contact-us::after {
+        display: none;
+    }
+
+    .footer__navigation {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 37px;
+    }
+
+}
+
+@media (min-width: 1023px) {
+
+    /* tablet-above */
+    .contact-us__form {
+        max-width: 556px;
+    }
+}
+
+@media (max-width: 760px) {
+    :root {
+        --section-padding-y: 30px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .hidden-mobile {
+        display: none;
+    }
+
+    .header__logo {
+        max-width: 144px;
+    }
+
+    .header {
+        padding-top: 15px;
+    }
+
+    .burger-button {
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+        /* сбросил стиль по умолчанию */
+        height: 48px;
+        width: 48px;
+        position: relative;
+    }
+
+    .burger-button:hover {
+        background-color: var(--color-accent);
+    }
+
+    .burger-button::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* центрирование по центру */
+        width: 50%;
+        height: 2px;
+        background-color: var(--color-dark);
+        border-radius: var(--border-radius-small);
+        box-shadow: 0 -8px, 0 8px;
+    }
+
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    .hero__body {
+        display: contents;
+        /* теперь на дочерние элементы будет действовать правила дочернего элемента 
+        и теперь можно с помощью ордер изменить их порядок*/
+    }
+
+    .hero__main {
+        flex-direction: column;
+
+    }
+
+    .hero__title {
+        order: -2;
+        /* так как ордер начинается с 0 -2 делает его 1 по списку*/
+        margin-bottom: 10px;
+    }
+
+    .hero__img {
+        order: -1;
+        max-width: 100%;
+        /* так как ордер начинается с 0 -1 делает его 2 по списку*/
+        margin-bottom: 20px;
+    }
+
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+    .hero__description {
+        margin-bottom: 40px;
+    }
+
+    .hero__button {
+        width: 100%;
+        max-width: 390px;
+        margin-inline: auto;
+    }
+
+
+    .section__header {
+        flex-direction: column;
+        row-gap: 30px;
+        text-align: center;
+    }
+
+    .section__header:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    .studies__item {
+        box-sizing: border-box !important;
+        min-width: 350px;
+        padding: 42px 50px;
+        color: var(--color-light);
+        background-color: var(--color-dark);
+        border-radius: var(--border-radius-large);
+
+        scroll-snap-align: start;
+    }
+
+    .studies__list {
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        width: 100vw;
+        column-gap: 20px;
+    }
+
+
+
+    .process__list {
+        row-gap: 20px;
+    }
+
+    .process__accordion {
+        padding: 30px;
+    }
+
+    .process__accordion-indicator {
+        width: 30px;
+    }
+
+    .process__accordion-header {
+        column-gap: 28px;
+    }
+
+    .process__accordion-title::before {
+        font-size: 30px;
+    }
+
+    .process__accordion-title {
+        column-gap: 33px;
+        font-size: 18px;
+    }
+
+    .grid--3 {
+        --gridColumns: 1;
+    }
+
+    .reviews__slider {
+        --reviewsSliderSlideWidth: 330px;
+
+    }
+
+    .review-card {
+        --reviewCardCornerWidth: 32px;
+        --reviewCardCornerOffsetLeft: 47px;
+
+        row-gap: 44px;
+    }
+
+    .review-card__body {
+        padding: 30px;
+    }
+
+
+    .field__label {
+        font-size: 14px;
+    }
+
+
+    .contact-us__request-types,
+    .contact-us__body {
+        background-color: var(--color-gray);
+    }
+
+    .contact-us__request-types {
+        padding: 40px 52px 36px;
+        border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+    }
+
+    .contact-us__body {
+        row-gap: 20px;
+        margin-bottom: 30px;
+        padding: 10px 30px 50px;
+        border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+
+    }
+
+    .field {
+        row-gap: 10px;
+    }
+
+    .field__input {
+        padding-inline: 20px;
+    }
+
+    .field__input--textarea {
+        height: 132px;
+    }
+
+    .footer {
+        padding-inline: 0;
+
+    }
+
+    .footer__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 37px;
+        padding: 50px var(--container-padding-x) 30px;
+    }
+
+    .footer__menu-list {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    .footer__body {   
+        row-gap: inherit;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer__contacts {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__extra {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+        order: 2;
+        padding-top: 37px;
+        width: 100%;
+        border-top: 1px solid currentColor;
+    }
+
+    .footer__navigation {
+        display: contents;
+    }
+
+    .footer__soc1als {
+        order: 1;
+    }
+
+}
+
+@media (min-width: 761px) {
+
+    /* mobile-above */
+    .visible-mobile {
+        display: none !important;
+    }
+
+    /* делает кнопки невидимыми 
+    в пк варианте так как тут min-width 
+    условие идет по нарастанию и получается 
+    не срабатывает когда экран выше разрешением
+     чем пк версия  по этому ему не нужно
+      прятать кнопку в пк версии!!!!!!*/
+
+
+
+    .studies {
+        color: var(--color-light);
+        background-color: var(--color-dark);
+        border-radius: var(--border-radius-large);
+        padding: 40px;
+    }
+
+
+    .studies__item:not(:last-child) {
+        padding-right: var(--studiesItemPaddingX);
+        border-right: 1px solid var(--color-light);
+    }
+
+    .studies__item:not(:first-child) {
+        padding-left: var(--studiesItemPaddingX);
+    }
+
+    .reviews__slider-list {
+        margin-left: calc(var(--reviewsSliderSlideWidth) / 2 *-1);
+
+    }
+
+    .contact-us {
+        padding: 60px 100px 80px;
+        background-color: var(--color-gray);
+        border-radius: var(--border-radius-large);
+    }
+
+    .contact-us__form {
+        row-gap: 40px;
+    }
+
+    .footer__inner {
+        border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+
+    }
+    .footer__body:not(:last-child) {
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid currentColor;
+        /* рамка с низу блока !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    }
+}
+
+@media (max-width: 481px) {
+
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .hero__title {
+        font-size: 43px;
+    }
+
+    .hero__partners-list {
+
+        --heroPartnersWidthOffsetX: 60px;
+        column-gap: 0;
+        /* пока хз что это */
+        width: calc(100vw + var(--heroPartnersWidthOffsetX)* 2);
+        width: calc(100vw + var(--heroPartnersWidthOffsetX)* 2);
+        margin-left: calc((var(--heroPartnersWidthOffsetX) + var(--container-padding-x))* -1);
+        margin-left: calc((var(--heroPartnersWidthOffsetX) + var(--container-padding-x))* -1);
+
+
+    }
+
+    .hero__partners-item {
+        display: flex !important;
+        justify-content: start;
+    }
+
+    .hero__partners-item:nth-child(-n+3) {
+        justify-content: end;
+    }
+
+
+    .grid {
+        gap: 30px;
+    }
+
+    .service__list:not(:last-child) {
+        margin-bottom: 70px;
+    }
+
+    .service-card {
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 27px;
+    }
+
+    .service-card__title {
+        grid-column: -1 / 1;
+    }
+
+    .service-card__link {
+        align-self: end;
+
+    }
+
+    .service-card__link-label {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        margin: -1px !important;
+        border: 0 !important;
+        padding: 0 !important;
+        white-space: nowrap !important;
+        clip-path: inset(100%) !important;
+        clip: rect(0 0 0 0) !important;
+        overflow: hidden !important;
+        /* узнать про эти букавы */
+    }
+
+    .service-card__body {
+        display: contents;
+    }
+
+    .service-card__img {
+        max-width: 165px;
+    }
+
+    .banner__body {
+        row-gap: 20px;
+    }
+
+    .team-card {
+        padding-inline: 50px;
+    }
+
+    .team-card__body {
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    .team__button {
+        width: 100%;
+    }
+}

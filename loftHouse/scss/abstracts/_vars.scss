@@ -1,0 +1,19 @@
+:root {
+    --color-dark: #242B33;
+    --color-dark-alt: #2D343C;
+    --color-accent: #D4C17F;
+    --color-light: #ffffff;
+
+    --font-family-base: 'Raleway', sans-serif;
+    --font-family-accent: 'Playfair', serif;
+    --font-family-font-secondary: 'Roboto', sans-serif;
+
+
+    --font-size-base: 16px;
+
+    @include mobile {
+        --font-size-base: 14px;
+    }
+
+    --transition-duration: all 0.2s ease-in;
+}
