@@ -1,0 +1,15 @@
+.customizable {
+   flex-direction: row;
+   justify-content: space-between;
+
+   &__img {
+      order: -1;
+      height: auto;
+
+   }
+
+   @include tablet {
+      flex-direction: column-reverse;
+      row-gap: 30px;
+   }
+}

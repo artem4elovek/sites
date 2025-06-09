@@ -1,0 +1,23 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    &__logo{
+         display: flex;
+         column-gap: 10px;
+         align-items:center ;
+         svg{
+         fill: var(--color-blue-light);
+         }
+    }
+    &__list{
+        display: flex;
+        column-gap: 30px;
+    }
+    &__socials-list{
+        display: flex;
+        column-gap: 40px;
+          svg{
+         fill: var(--color-blue-light);
+         }
+    }
+}

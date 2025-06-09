@@ -1,0 +1,37 @@
+.header {
+    position: relative;
+    padding-block: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+     @include tablet{
+       justify-content: space-between;
+        }
+
+    &__menu{
+        flex-grow: 1;
+    }
+
+    &__logo {
+        display: flex;
+        column-gap: 13px;
+        align-items: center;
+        margin-right: 78px;
+    }
+
+    &__menu-list {
+        display: flex;
+        column-gap: 36px;
+    }
+    &__button-wrapper{
+        @include tablet{
+        display: flex;
+         column-gap: 18px;
+          button{
+           white-space: nowrap;
+           padding: 0;
+        }
+        }
+       
+    }
+}

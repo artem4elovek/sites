@@ -429,6 +429,9 @@ h1 {
   /* Контейнер контента */
   /* Кнопка закрытия */
 }
+.mobile-overlay:not([open]) {
+  display: none;
+}
 .mobile-overlay:modal {
   position: fixed !important;
   inset: 0 !important;

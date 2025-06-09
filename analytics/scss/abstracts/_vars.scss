@@ -1,0 +1,26 @@
+:root {
+    --color-dark-blue: #172755;
+    --color-pink: #EF2A82;
+    --color-blue: #0088F0;
+    --color-blue-light: #8794BA;
+    --color-border: #465B95;
+    --color-plans: #0F1F4B;
+    --color-chart-lines: #EEEEF7;
+    --color-light: #ffffff;
+    --font-family-base: 'Roboto', sans-serif;
+
+
+    --font-size-large: 18px;
+    --font-size-base: 16px;
+
+    --border: 1px solid var(--color-border);
+    --border-radius: 14px;
+    --border-radius-small: 7px;
+    --border-radius-large: 45px;
+
+    @include mobile {
+        --font-size-base: 14px;
+    }
+
+    --transition-duration: all 0.2s ease-in;
+}

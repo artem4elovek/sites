@@ -1,3 +1,4 @@
+/* Полное переопределение встроенных стилей */
 .mobile-overlay {
     position: fixed !important;
     inset: 0 !important;
@@ -6,15 +7,20 @@
     max-width: none !important;
     max-height: none !important;
     margin: 0 !important;
-    padding: 14px 20px !important;
+    padding: 50px 15px !important;
     border: none !important;
     box-sizing: border-box;
-    background-color: var(--color-dark-alt);
+    background-color: var(--color-dark-blue);
+   
+    color: var(--color-blue-light);
 
-&:not([open]){
 
-    display: none;
-}
+    &__header{
+        
+        display: flex;
+        justify-content: end;
+    }
+
     /* Для модального режима */
     &:modal {
         position: fixed !important;

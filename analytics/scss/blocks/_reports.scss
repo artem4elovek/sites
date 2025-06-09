@@ -1,0 +1,13 @@
+.reports {
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include tablet {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    img {
+        height: auto;
+    }
+}
