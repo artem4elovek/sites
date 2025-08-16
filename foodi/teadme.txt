@@ -1,0 +1,1 @@
+установить all-in-one WP Migration и отктыть файл
