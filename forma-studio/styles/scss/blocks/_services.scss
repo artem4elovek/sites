@@ -1,0 +1,36 @@
+@use '../helpers' as *;
+
+.services {
+
+
+    &__item {
+        border-top: 1px solid var(--color-light-alt);
+
+        &:last-child {
+            border-bottom: 1px solid var(--color-light-alt);
+        }
+
+        &-body {
+            padding: 24px 20px;
+
+            @include tablet-above {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+            }
+
+
+        }
+
+        &-title {
+            text-transform: uppercase;
+        }
+
+        &-description {
+            max-width: 804px;
+            width: 100%;
+
+        }
+    }
+}

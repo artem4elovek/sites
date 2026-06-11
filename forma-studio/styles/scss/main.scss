@@ -1,0 +1,22 @@
+
+
+
+@use'./utils';
+@use './fonts';
+@use './variables';
+@use './globals';
+@use'./normalize';
+
+@use './blocks/button';
+@use './blocks/header';
+@use './blocks/burger';
+@use './blocks/section';
+@use './blocks/services';
+@use './blocks/projects';
+@use './blocks/card';
+@use './blocks/steps';
+@use './blocks/catalog';
+@use './blocks/form';
+@use './blocks/request';
+@use './blocks/footer';
+

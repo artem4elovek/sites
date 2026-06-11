@@ -1,0 +1,37 @@
+@use '../helpers' as *;
+
+.catalog {
+
+    &__title{
+        max-width: 556px;
+        width: 100%;
+         @include tablet {
+            margin-top: 60px;
+        }
+    }
+
+    &__section {
+        background-color: var(--color-light);
+        color: var( --color-text);
+        padding-bottom: 150px;
+
+    }
+
+    &__gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        @include tablet {
+            grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+        }
+
+    }
+
+    &__form{
+        @include tablet {
+            margin-bottom: 60px;
+        }
+
+    }
+}

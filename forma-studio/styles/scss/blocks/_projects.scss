@@ -1,0 +1,60 @@
+@use '../helpers' as *;
+
+.project {
+    &__section {
+        background-color: var(--color-light);
+        color: var(--color-text);
+        padding-top: 160px;
+        padding-bottom: 160px;
+
+    }
+
+    &__body {}
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        overflow-y: hidden;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+         align-items: stretch;
+        gap: 20px;
+
+        &-prev,
+        &-next {
+            background: transparent;
+            border: none;
+        }
+    }
+
+    scroll-slider-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__item {
+       
+        scroll-snap-align: start;
+       
+    }
+
+    &__card {
+        width: 560px;
+        height: 100%;
+        
+
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+}
+
+.is-hide {
+    display: none !important;
+}

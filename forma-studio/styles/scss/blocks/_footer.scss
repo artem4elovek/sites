@@ -1,0 +1,74 @@
+@use '../helpers' as *;
+
+.footer {
+    background-color: #171717;
+    padding-top: 100px;
+    padding-bottom: 120px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+    }
+
+    &__copy {
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+        font-size: 14px;
+    }
+
+    &__container {
+
+        display: flex;
+        row-gap: 30px;
+        align-items: center;
+
+        @include tablet-above {
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 1545px;
+            width: 100%;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        max-width: 975px;
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 0;
+        margin-left: 0;
+
+        @include mobile {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 1.16;
+
+        &-address {
+            padding-left: 23px;
+        }
+
+        &-item {
+            display: flex;
+            column-gap: 10px;
+        }
+    }
+}

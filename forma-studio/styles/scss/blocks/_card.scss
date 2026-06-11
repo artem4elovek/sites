@@ -1,0 +1,33 @@
+@use '../helpers' as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    border: 1px solid var(--color-light-alt);
+    justify-content: stretch;
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        
+     
+        height: 100%;
+
+        &-subtitles {
+            padding-bottom: 30px;
+        }
+
+        &-description {
+            padding-bottom: 30px;
+        }
+
+        &-link {
+            align-self: flex-start;
+            margin-bottom:0;
+            margin-top: auto;
+        }
+
+    }
+}

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/css/main.css">
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner container">
+            <div class="header__top">
+                <nav class="header__menu ">
+                    <input type="checkbox" id="burger-button" class="burger__input">
+                    <label for="burger-button" class="burger__label">
+                        <span class="burger__span"></span>
+                    </label>
+                    <ul class="header__menu-list burger__menu">
+                        <li class="header__menu-item">
+                            <a href="/" class="header__menu-link">ABOUT STUDIO</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="/" class="header__menu-link">PRICES</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="/" class="header__menu-link">PROJECTS</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="/" class="header__menu-link">CONTACTS</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="tel:+380682554585" class="header__phone visible-mobile">+38 (068) 255 45 85</a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <svg width="141" height="15" viewBox="0 0 141 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M2.45117 0.195312V14.4141H0V0.195312H2.45117ZM8.25195 6.41602V8.35938H1.82617V6.41602H8.25195ZM9.0625 0.195312V2.14844H1.82617V0.195312H9.0625ZM22.3535 6.91406V7.69531C22.3535 8.76953 22.2135 9.73307 21.9336 10.5859C21.6536 11.4388 21.2533 12.1647 20.7324 12.7637C20.2181 13.3626 19.5996 13.8216 18.877 14.1406C18.1543 14.4531 17.3535 14.6094 16.4746 14.6094C15.6022 14.6094 14.8047 14.4531 14.082 14.1406C13.3659 13.8216 12.7441 13.3626 12.2168 12.7637C11.6895 12.1647 11.2793 11.4388 10.9863 10.5859C10.6999 9.73307 10.5566 8.76953 10.5566 7.69531V6.91406C10.5566 5.83984 10.6999 4.87956 10.9863 4.0332C11.2728 3.18034 11.6764 2.45443 12.1973 1.85547C12.7246 1.25 13.3464 0.791016 14.0625 0.478516C14.7852 0.159505 15.5827 0 16.4551 0C17.334 0 18.1348 0.159505 18.8574 0.478516C19.5801 0.791016 20.2018 1.25 20.7227 1.85547C21.2435 2.45443 21.6439 3.18034 21.9238 4.0332C22.2103 4.87956 22.3535 5.83984 22.3535 6.91406ZM19.9023 7.69531V6.89453C19.9023 6.10026 19.8242 5.40039 19.668 4.79492C19.5182 4.18294 19.2936 3.67188 18.9941 3.26172C18.7012 2.84505 18.3398 2.53255 17.9102 2.32422C17.4805 2.10938 16.9954 2.00195 16.4551 2.00195C15.9147 2.00195 15.4329 2.10938 15.0098 2.32422C14.5866 2.53255 14.2253 2.84505 13.9258 3.26172C13.6328 3.67188 13.4082 4.18294 13.252 4.79492C13.0957 5.40039 13.0176 6.10026 13.0176 6.89453V7.69531C13.0176 8.48958 13.0957 9.19271 13.252 9.80469C13.4082 10.4167 13.6361 10.9342 13.9355 11.3574C14.2415 11.7741 14.6061 12.0898 15.0293 12.3047C15.4525 12.513 15.9342 12.6172 16.4746 12.6172C17.0215 12.6172 17.5065 12.513 17.9297 12.3047C18.3529 12.0898 18.7109 11.7741 19.0039 11.3574C19.2969 10.9342 19.5182 10.4167 19.668 9.80469C19.8242 9.19271 19.9023 8.48958 19.9023 7.69531ZM24.8047 0.195312H29.834C30.9147 0.195312 31.8359 0.358073 32.5977 0.683594C33.3594 1.00911 33.9421 1.49089 34.3457 2.12891C34.7559 2.76042 34.9609 3.54167 34.9609 4.47266C34.9609 5.18229 34.8307 5.80729 34.5703 6.34766C34.3099 6.88802 33.9421 7.34375 33.4668 7.71484C32.9915 8.07943 32.4251 8.36263 31.7676 8.56445L31.0254 8.92578H26.5039L26.4844 6.98242H29.873C30.459 6.98242 30.9473 6.87826 31.3379 6.66992C31.7285 6.46159 32.0215 6.17839 32.2168 5.82031C32.4186 5.45573 32.5195 5.04557 32.5195 4.58984C32.5195 4.09505 32.4219 3.66536 32.2266 3.30078C32.0378 2.92969 31.7448 2.64648 31.3477 2.45117C30.9505 2.24935 30.446 2.14844 29.834 2.14844H27.2559V14.4141H24.8047V0.195312ZM32.9199 14.4141L29.5801 8.02734L32.1484 8.01758L35.5371 14.2871V14.4141H32.9199ZM38.3984 0.195312H40.5859L44.6973 11.1621L48.7988 0.195312H50.9863L45.5566 14.4141H43.8184L38.3984 0.195312ZM37.4023 0.195312H39.4824L39.8438 9.6875V14.4141H37.4023V0.195312ZM49.9023 0.195312H51.9922V14.4141H49.541V9.6875L49.9023 0.195312ZM60.6152 2.08984L56.3672 14.4141H53.7988L59.1504 0.195312H60.791L60.6152 2.08984ZM64.1699 14.4141L59.9121 2.08984L59.7266 0.195312H61.377L66.748 14.4141H64.1699ZM63.9648 9.14062V11.084H56.2305V9.14062H63.9648ZM80.8008 10.752C80.8008 10.459 80.7552 10.1986 80.6641 9.9707C80.5794 9.74284 80.4264 9.53451 80.2051 9.3457C79.9837 9.1569 79.6712 8.97461 79.2676 8.79883C78.8704 8.61654 78.3626 8.43099 77.7441 8.24219C77.0671 8.03385 76.4421 7.80273 75.8691 7.54883C75.3027 7.28841 74.8079 6.98893 74.3848 6.65039C73.9616 6.30534 73.6328 5.91146 73.3984 5.46875C73.1641 5.01953 73.0469 4.50195 73.0469 3.91602C73.0469 3.33659 73.1673 2.80924 73.4082 2.33398C73.6556 1.85872 74.0039 1.44857 74.4531 1.10352C74.9089 0.751953 75.446 0.481771 76.0645 0.292969C76.6829 0.0976562 77.3665 0 78.1152 0C79.1699 0 80.0781 0.195312 80.8398 0.585938C81.6081 0.976562 82.1973 1.50065 82.6074 2.1582C83.0241 2.81576 83.2324 3.54167 83.2324 4.33594H80.8008C80.8008 3.86719 80.6999 3.45378 80.498 3.0957C80.3027 2.73112 80.0033 2.44466 79.5996 2.23633C79.2025 2.02799 78.6979 1.92383 78.0859 1.92383C77.5065 1.92383 77.0247 2.01172 76.6406 2.1875C76.2565 2.36328 75.9701 2.60091 75.7812 2.90039C75.5924 3.19987 75.498 3.53841 75.498 3.91602C75.498 4.18294 75.5599 4.42708 75.6836 4.64844C75.8073 4.86328 75.9961 5.0651 76.25 5.25391C76.5039 5.4362 76.8229 5.60872 77.207 5.77148C77.5911 5.93424 78.0436 6.09049 78.5645 6.24023C79.3522 6.47461 80.0391 6.73503 80.625 7.02148C81.2109 7.30143 81.6992 7.62044 82.0898 7.97852C82.4805 8.33659 82.7734 8.74349 82.9688 9.19922C83.1641 9.64844 83.2617 10.1595 83.2617 10.7324C83.2617 11.3314 83.1413 11.8717 82.9004 12.3535C82.6595 12.8288 82.3145 13.2357 81.8652 13.5742C81.4225 13.9062 80.8887 14.1634 80.2637 14.3457C79.6452 14.5215 78.9551 14.6094 78.1934 14.6094C77.5098 14.6094 76.8359 14.5182 76.1719 14.3359C75.5143 14.1536 74.9154 13.877 74.375 13.5059C73.8346 13.1283 73.4049 12.6595 73.0859 12.0996C72.7669 11.5332 72.6074 10.8724 72.6074 10.1172H75.0586C75.0586 10.5794 75.1367 10.9733 75.293 11.2988C75.4557 11.6243 75.6803 11.8913 75.9668 12.0996C76.2533 12.3014 76.5853 12.4512 76.9629 12.5488C77.347 12.6465 77.7572 12.6953 78.1934 12.6953C78.7663 12.6953 79.2448 12.6139 79.6289 12.4512C80.0195 12.2884 80.3125 12.0605 80.5078 11.7676C80.7031 11.4746 80.8008 11.1361 80.8008 10.752ZM91.2793 0.195312V14.4141H88.8477V0.195312H91.2793ZM95.7422 0.195312V2.14844H84.4238V0.195312H95.7422ZM105.596 0.195312H108.037V9.69727C108.037 10.778 107.803 11.6829 107.334 12.4121C106.865 13.1413 106.227 13.6914 105.42 14.0625C104.619 14.4271 103.724 14.6094 102.734 14.6094C101.712 14.6094 100.801 14.4271 100 14.0625C99.1992 13.6914 98.5677 13.1413 98.1055 12.4121C97.6497 11.6829 97.4219 10.778 97.4219 9.69727V0.195312H99.8633V9.69727C99.8633 10.3809 99.9805 10.944 100.215 11.3867C100.449 11.8229 100.781 12.1452 101.211 12.3535C101.641 12.5618 102.148 12.666 102.734 12.666C103.32 12.666 103.825 12.5618 104.248 12.3535C104.678 12.1452 105.01 11.8229 105.244 11.3867C105.479 10.944 105.596 10.3809 105.596 9.69727V0.195312ZM114.834 14.4141H111.797L111.816 12.4707H114.834C115.713 12.4707 116.449 12.2786 117.041 11.8945C117.64 11.5104 118.089 10.9603 118.389 10.2441C118.695 9.52799 118.848 8.67513 118.848 7.68555V6.91406C118.848 6.14583 118.76 5.46549 118.584 4.87305C118.415 4.2806 118.161 3.78255 117.822 3.37891C117.49 2.97526 117.08 2.66927 116.592 2.46094C116.11 2.2526 115.553 2.14844 114.922 2.14844H111.738V0.195312H114.922C115.866 0.195312 116.729 0.354818 117.51 0.673828C118.291 0.986328 118.965 1.4388 119.531 2.03125C120.104 2.6237 120.544 3.33333 120.85 4.16016C121.156 4.98698 121.309 5.91146 121.309 6.93359V7.68555C121.309 8.70768 121.156 9.63216 120.85 10.459C120.544 11.2858 120.104 11.9954 119.531 12.5879C118.958 13.1738 118.275 13.6263 117.48 13.9453C116.693 14.2578 115.811 14.4141 114.834 14.4141ZM113.154 0.195312V14.4141H110.703V0.195312H113.154ZM126.387 0.195312V14.4141H123.936V0.195312H126.387ZM140.771 6.91406V7.69531C140.771 8.76953 140.632 9.73307 140.352 10.5859C140.072 11.4388 139.671 12.1647 139.15 12.7637C138.636 13.3626 138.018 13.8216 137.295 14.1406C136.572 14.4531 135.771 14.6094 134.893 14.6094C134.02 14.6094 133.223 14.4531 132.5 14.1406C131.784 13.8216 131.162 13.3626 130.635 12.7637C130.107 12.1647 129.697 11.4388 129.404 10.5859C129.118 9.73307 128.975 8.76953 128.975 7.69531V6.91406C128.975 5.83984 129.118 4.87956 129.404 4.0332C129.691 3.18034 130.094 2.45443 130.615 1.85547C131.143 1.25 131.764 0.791016 132.48 0.478516C133.203 0.159505 134.001 0 134.873 0C135.752 0 136.553 0.159505 137.275 0.478516C137.998 0.791016 138.62 1.25 139.141 1.85547C139.661 2.45443 140.062 3.18034 140.342 4.0332C140.628 4.87956 140.771 5.83984 140.771 6.91406ZM138.32 7.69531V6.89453C138.32 6.10026 138.242 5.40039 138.086 4.79492C137.936 4.18294 137.712 3.67188 137.412 3.26172C137.119 2.84505 136.758 2.53255 136.328 2.32422C135.898 2.10938 135.413 2.00195 134.873 2.00195C134.333 2.00195 133.851 2.10938 133.428 2.32422C133.005 2.53255 132.643 2.84505 132.344 3.26172C132.051 3.67188 131.826 4.18294 131.67 4.79492C131.514 5.40039 131.436 6.10026 131.436 6.89453V7.69531C131.436 8.48958 131.514 9.19271 131.67 9.80469C131.826 10.4167 132.054 10.9342 132.354 11.3574C132.66 11.7741 133.024 12.0898 133.447 12.3047C133.87 12.513 134.352 12.6172 134.893 12.6172C135.439 12.6172 135.924 12.513 136.348 12.3047C136.771 12.0898 137.129 11.7741 137.422 11.3574C137.715 10.9342 137.936 10.4167 138.086 9.80469C138.242 9.19271 138.32 8.48958 138.32 7.69531Z"
+                        fill="#F5F5F5" />
+                </svg>
+                <a href="tel:+380682554585" class="header__phone hidden-mobile">+38 (068) 255 45 85</a>
+
+            </div>
+            <div class="header__bottom">
+                <h1 class="header__title">Architecture</br>
+                    that shapes space</h1>
+                <div class="header__description">
+                    <p>
+                        We create innovative and aesthetically refined spaces where comfort</br> and functionality merge
+                        with
+                        contemporary design.
+                    </p>
+                </div>
+                <a href="" class="header__button button button--light">
+                    Submit a request
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section">
+            <header class="section__header container">
+                <h2 class="section__title">
+                    Our Services
+                </h2>
+            </header>
+            <div class="services__body container">
+                <ul class="services__list">
+                    <li class="services__item">
+                        <div class="services__item-body">
+                            <h3 class="services__item-title">Architectural Design</h3>
+                            <div class="services__item-description">
+                                <p>We will design your home personally for you, combining ergonomics and beauty, guided
+                                    by a designer’s vision of space.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services__item">
+                        <div class="services__item-body">
+                            <h3 class="services__item-title">Interior Design</h3>
+                            <div class="services__item-description">
+                                <p>Cпроектуємо ексклюзивний дизайн інтер'єру з урахуванням ваших побажань і наших
+                                    завдань.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services__item">
+                        <div class="services__item-body">
+                            <h3 class="services__item-title">Architectural supervision</h3>
+                            <div class="services__item-description">
+                                <p>We oversee the implementation of our projects from concept to realization</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services__item">
+                        <div class="services__item-body">
+                            <h3 class="services__item-title">Turnkey Projects</h3>
+                            <div class="services__item-description">
+                                <p>We handle everything from concept development to project completion, so you don’t
+                                    have to worry about a thing.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section project__section">
+            <header class="section__header container">
+                <h2 class="section__title">
+                    Our Projects
+                </h2>
+            </header>
+            <div class="project__body container">
+                <ul class="project__list">
+                    <li class="project__item">
+                        <article class="project__card card">
+                            <img src="./img/img/project/1.jpg" alt="" width="520" height="377" loading="lazy"
+                                class="card__img">
+                            <footer class="card__footer">
+                                <h3 class="card__footer-title">Apartment 55.6 m²</h3>
+                                <h3 class="card__footer-subtitles h5">For a young couple of lawyers</h3>
+                                <div class="card__footer-description">
+                                    <p>The main idea of this interior is to create a bright, light, and cozy space. Warm
+                                        colors and soft lines are used throughout the design to evoke a sense of calm
+                                        and harmony.
+                                    </p>
+                                </div>
+                                <a href="" class="card__footer-link button button--light button--light-border ">more</a>
+
+                            </footer>
+
+                        </article>
+                    </li>
+                    <li class="project__item">
+                        <article class="project__card card">
+                            <img src="./img/img/project/2.jpg" alt="" width="520" height="377" loading="lazy"
+                                class="card__img">
+                            <footer class="card__footer">
+                                <h3 class="card__footer-title">The house</h3>
+                                <h3 class="card__footer-subtitles h5">For a family of doctors</h3>
+                                <div class="card__footer-description">
+                                    <p>A comfortable space for the homeowners is ensured through proper organization and
+                                        planning of the house. The open terrace seamlessly connects the pool, kitchen,
+                                        and living areas.</p>
+                                </div>
+                                <a href="" class="card__footer-link button button--light button--light-border ">more</a>
+
+                            </footer>
+
+                        </article>
+                    </li>
+                    <li class="project__item">
+                        <article class="project__card card">
+                            <img src="./img/img/project/3.jpg" alt="" width="520" height="377" loading="lazy"
+                                class="card__img">
+                            <footer class="card__footer">
+                                <h3 class="card__footer-title">Country House</h3>
+                                <h3 class="card__footer-subtitles h5 ">For a family of entrepreneurs</h3>
+                                <div class="card__footer-description">
+                                    <p>During the project development, a layout was created featuring an open
+                                        kitchen-living area with a centrally placed fireplace that serves as a spatial
+                                        divider.</p>
+                                </div>
+                                <a href="" class="card__footer-link button button--light button--light-border ">more</a>
+
+                            </footer>
+
+                        </article>
+                    </li>
+                    <li class="project__item">
+                        <article class="project__card card">
+                            <img src="./img/img/project/3.jpg" alt="" width="520" height="377" loading="lazy"
+                                class="card__img">
+                            <footer class="card__footer">
+                                <h3 class="card__footer-title">Apartment 55.6 m²</h3>
+                                <h3 class="card__footer-subtitles h5">For a young couple of lawyers</h3>
+                                <div class="card__footer-description">
+                                    <p>The main idea of this interior is to create a bright, light, and cozy space. Warm
+                                        colors and soft lines are used throughout the design to evoke a sense of calm
+                                        and harmony.</p>
+                                </div>
+                                <a href="" class="card__footer-link button button--light button--light-border ">more</a>
+
+                            </footer>
+
+                        </article>
+                    </li>
+                </ul>
+                <div class="project__controls">
+                    <button role="button" class="project__list-prev " aria-label="preview">
+                        <svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.146446 4.03544C-0.0488167 3.84018 -0.0488167 3.52359 0.146446 3.32833L3.32843 0.146351C3.52369 -0.0489113 3.84027 -0.0489113 4.03553 0.146351C4.2308 0.341613 4.2308 0.658195 4.03553 0.853458L1.20711 3.68188L4.03553 6.51031C4.2308 6.70557 4.2308 7.02216 4.03553 7.21742C3.84027 7.41268 3.52369 7.41268 3.32843 7.21742L0.146446 4.03544ZM60.5 3.68188V4.18188H0.5V3.68188V3.18188H60.5V3.68188Z"
+                                fill="black" />
+                        </svg>
+                    </button>
+                    <button role="button" class="project__list-next" aria-label="next">
+                        <svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M60.3536 4.03544C60.5488 3.84018 60.5488 3.52359 60.3536 3.32833L57.1716 0.146351C56.9763 -0.0489113 56.6597 -0.0489113 56.4645 0.146351C56.2692 0.341613 56.2692 0.658195 56.4645 0.853458L59.2929 3.68188L56.4645 6.51031C56.2692 6.70557 56.2692 7.02216 56.4645 7.21742C56.6597 7.41268 56.9763 7.41268 57.1716 7.21742L60.3536 4.03544ZM0 3.68188V4.18188H60V3.68188V3.18188H0V3.68188Z"
+                                fill="black" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="section container steps__section ">
+            <div class="steps__body">
+                <h2 class="section__title">
+                    from request to turnkey delivery
+                </h2>
+
+                <ol class="steps__list">
+                    <li class="steps__item">
+                        <h4 class="steps__item-title">
+                            We receive your request
+                        </h4>
+                        <p class="steps__item-text">
+                            Call us or send a message through the website.
+                        </p>
+                    </li>
+                    <li class="steps__item">
+                        <h4 class="steps__item-title">
+                            Let’s get acquainted
+                        </h4>
+                        <p class="steps__item-text">
+                            During the first meeting, we will discuss all the details of your project.
+                        </p>
+                    </li>
+                    <li class="steps__item">
+                        <h4 class="steps__item-title">
+                            We visit the site
+                        </h4>
+                        <p class="steps__item-text">
+                            We meet on-site to take necessary measurements, conduct a photo survey, and complete a
+                            detailed technical brief.
+                        </p>
+                    </li>
+                    <li class="steps__item">
+                        <h4 class="steps__item-title">
+                            We discuss and agree on the overall project budget.
+                        </h4>
+                        <p class="steps__item-text">
+                            Costs for interior elements, finishing materials, furniture, and equipment.
+                        </p>
+                    </li>
+                    <li class="steps__item">
+                        <h4 class="steps__item-title">
+                            We define the layout solution.
+                        </h4>
+                        <p class="steps__item-text">
+                            At this stage, we offer several options for zoning, furniture placement, and equipment
+                            layout.
+                        </p>
+                    </li>
+                    <li class="steps__item">
+                        <h4 class="steps__item-title">
+                            We develop the design concept.
+                        </h4>
+                        <p class="steps__item-text">
+                            Based on your tastes and taking into account current trends and directions, we define the
+                            style of your future interior.
+                        </p>
+                    </li>
+                    <li class="steps__item">
+                        <h4 class="steps__item-title">
+                            We prepare the working documentation.
+                        </h4>
+                        <p class="steps__item-text">
+                            At the next stage, we prepare all the necessary working drawings.
+                        </p>
+                    </li>
+                    <li class="steps__item">
+                        <h4 class="steps__item-title">
+                            Project outfitting
+                        </h4>
+                        <p class="steps__item-text">
+                            At the final outfitting stage, we compile specifications for furniture, lighting, and
+                            interior items.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+            <img src="./img/img/steps/1.jpg" class="steps__img" width="1212" height="1190" alt="">
+        </section>
+
+
+
+        <section class="section catalog__section">
+            <header class="section__header container">
+                <h2 class="section__title catalog__title">
+                    Get a catalog of our projects
+                </h2>
+            </header>
+            <div class="catalog__body container">
+                <form action="" class="catalog__form form">
+                    <img src="./img/img/catalog/decoration.jpg" alt="" loading="lazy" width="820" height="457"
+                        class="form__decoration">
+                    <div class="form__body">
+                        <h3 class="form__title">Leave your email to receive our project catalog
+                        </h3>
+                        <h4 class="form__description h5">
+                            The catalog will help you choose a style and plan your layout.
+                        </h4>
+                        <div class="form__field">
+                            <label for="email" class="form__label visually-hidden">email</label>
+                            <input type="email" id="email" placeholder="Enter your email" class="form__input">
+                        </div>
+                        <label for="agree" class="form__checkbox-label">
+                            <input id="agree" type="checkbox" class="form__checkbox-input" value="agree">
+                            I agree to the processing of personal data
+                        </label>
+
+                        <button class="button button--dark form-button" type="submit">
+                            Get the catalog
+                        </button>
+
+
+                    </div>
+                </form>
+
+                <article class="catalog__gallery">
+                    <img src="./img/img/catalog/1.jpg" alt="" class="catalog__gallery-img">
+                    <img src="./img/img/catalog/2.jpg" alt="" class="catalog__gallery-img">
+                    <img src="./img/img/catalog/3.jpg" alt="" class="catalog__gallery-img">
+                    <img src="./img/img/catalog/4.jpg" alt="" class="catalog__gallery-img">
+                    <img src="./img/img/catalog/5.jpg" alt="" class="catalog__gallery-img">
+                    <img src="./img/img/catalog/6.jpg" alt="" class="catalog__gallery-img">
+                    <img src="./img/img/catalog/7.jpg" alt="" class="catalog__gallery-img">
+                    <img src="./img/img/catalog/8.jpg" alt="" class="catalog__gallery-img">
+                </article>
+            </div>
+        </section>
+
+        <section class="request">
+            <div class="container">
+                <div class="request__inner">
+                    <form action="" class="request__form">
+                        <h2 class="section__title request__title">
+                            Submit a request and we will assist you with your project
+                        </h2>
+                        <div class="request__form-field">
+                            <label for="request_email" class="request__form-label visually-hidden">email</label>
+                            <input type="email" id="request_email" placeholder="Enter your email"
+                                class="request__form-input">
+                            <button class="button button--light-alt request__form-button">Submit a request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container ">
+            <section class="footer__inner">
+                <svg width="219" height="122" viewBox="0 0 219 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10.125 0.625V46.125H2.28125V0.625H10.125ZM28.6875 20.5312V26.75H8.125V20.5312H28.6875ZM31.2812 0.625V6.875H8.125V0.625H31.2812ZM73.8125 22.125V24.625C73.8125 28.0625 73.3646 31.1458 72.4688 33.875C71.5729 36.6042 70.2917 38.9271 68.625 40.8438C66.9792 42.7604 65 44.2292 62.6875 45.25C60.375 46.25 57.8125 46.75 55 46.75C52.2083 46.75 49.6562 46.25 47.3438 45.25C45.0521 44.2292 43.0625 42.7604 41.375 40.8438C39.6875 38.9271 38.375 36.6042 37.4375 33.875C36.5208 31.1458 36.0625 28.0625 36.0625 24.625V22.125C36.0625 18.6875 36.5208 15.6146 37.4375 12.9062C38.3542 10.1771 39.6458 7.85417 41.3125 5.9375C43 4 44.9896 2.53125 47.2812 1.53125C49.5938 0.510417 52.1458 0 54.9375 0C57.75 0 60.3125 0.510417 62.625 1.53125C64.9375 2.53125 66.9271 4 68.5938 5.9375C70.2604 7.85417 71.5417 10.1771 72.4375 12.9062C73.3542 15.6146 73.8125 18.6875 73.8125 22.125ZM65.9688 24.625V22.0625C65.9688 19.5208 65.7188 17.2812 65.2188 15.3438C64.7396 13.3854 64.0208 11.75 63.0625 10.4375C62.125 9.10417 60.9688 8.10417 59.5938 7.4375C58.2188 6.75 56.6667 6.40625 54.9375 6.40625C53.2083 6.40625 51.6667 6.75 50.3125 7.4375C48.9583 8.10417 47.8021 9.10417 46.8438 10.4375C45.9062 11.75 45.1875 13.3854 44.6875 15.3438C44.1875 17.2812 43.9375 19.5208 43.9375 22.0625V24.625C43.9375 27.1667 44.1875 29.4167 44.6875 31.375C45.1875 33.3333 45.9167 34.9896 46.875 36.3438C47.8542 37.6771 49.0208 38.6875 50.375 39.375C51.7292 40.0417 53.2708 40.375 55 40.375C56.75 40.375 58.3021 40.0417 59.6562 39.375C61.0104 38.6875 62.1562 37.6771 63.0938 36.3438C64.0312 34.9896 64.7396 33.3333 65.2188 31.375C65.7188 29.4167 65.9688 27.1667 65.9688 24.625ZM81.6562 0.625H97.75C101.208 0.625 104.156 1.14583 106.594 2.1875C109.031 3.22917 110.896 4.77083 112.188 6.8125C113.5 8.83333 114.156 11.3333 114.156 14.3125C114.156 16.5833 113.74 18.5833 112.906 20.3125C112.073 22.0417 110.896 23.5 109.375 24.6875C107.854 25.8542 106.042 26.7604 103.938 27.4062L101.562 28.5625H87.0938L87.0312 22.3438H97.875C99.75 22.3438 101.312 22.0104 102.562 21.3438C103.812 20.6771 104.75 19.7708 105.375 18.625C106.021 17.4583 106.344 16.1458 106.344 14.6875C106.344 13.1042 106.031 11.7292 105.406 10.5625C104.802 9.375 103.865 8.46875 102.594 7.84375C101.323 7.19792 99.7083 6.875 97.75 6.875H89.5V46.125H81.6562V0.625ZM107.625 46.125L96.9375 25.6875L105.156 25.6562L116 45.7188V46.125H107.625ZM125.156 0.625H132.156L145.312 35.7188L158.438 0.625H165.438L148.062 46.125H142.5L125.156 0.625ZM121.969 0.625H128.625L129.781 31V46.125H121.969V0.625ZM161.969 0.625H168.656V46.125H160.812V31L161.969 0.625ZM196.25 6.6875L182.656 46.125H174.438L191.562 0.625H196.812L196.25 6.6875ZM207.625 46.125L194 6.6875L193.406 0.625H198.688L215.875 46.125H207.625ZM206.969 29.25V35.4688H182.219V29.25H206.969ZM26.2188 109.406C26.2188 108.469 26.0729 107.635 25.7812 106.906C25.5104 106.177 25.0208 105.51 24.3125 104.906C23.6042 104.302 22.6042 103.719 21.3125 103.156C20.0417 102.573 18.4167 101.979 16.4375 101.375C14.2708 100.708 12.2708 99.9688 10.4375 99.1562C8.625 98.3229 7.04167 97.3646 5.6875 96.2812C4.33333 95.1771 3.28125 93.9167 2.53125 92.5C1.78125 91.0625 1.40625 89.4062 1.40625 87.5312C1.40625 85.6771 1.79167 83.9896 2.5625 82.4688C3.35417 80.9479 4.46875 79.6354 5.90625 78.5312C7.36458 77.4062 9.08333 76.5417 11.0625 75.9375C13.0417 75.3125 15.2292 75 17.625 75C21 75 23.9062 75.625 26.3438 76.875C28.8021 78.125 30.6875 79.8021 32 81.9062C33.3333 84.0104 34 86.3333 34 88.875H26.2188C26.2188 87.375 25.8958 86.0521 25.25 84.9062C24.625 83.7396 23.6667 82.8229 22.375 82.1562C21.1042 81.4896 19.4896 81.1562 17.5312 81.1562C15.6771 81.1562 14.1354 81.4375 12.9062 82C11.6771 82.5625 10.7604 83.3229 10.1562 84.2812C9.55208 85.2396 9.25 86.3229 9.25 87.5312C9.25 88.3854 9.44792 89.1667 9.84375 89.875C10.2396 90.5625 10.8438 91.2083 11.6562 91.8125C12.4688 92.3958 13.4896 92.9479 14.7188 93.4688C15.9479 93.9896 17.3958 94.4896 19.0625 94.9688C21.5833 95.7188 23.7812 96.5521 25.6562 97.4688C27.5312 98.3646 29.0938 99.3854 30.3438 100.531C31.5938 101.677 32.5312 102.979 33.1562 104.438C33.7812 105.875 34.0938 107.51 34.0938 109.344C34.0938 111.26 33.7083 112.99 32.9375 114.531C32.1667 116.052 31.0625 117.354 29.625 118.438C28.2083 119.5 26.5 120.323 24.5 120.906C22.5208 121.469 20.3125 121.75 17.875 121.75C15.6875 121.75 13.5312 121.458 11.4062 120.875C9.30208 120.292 7.38542 119.406 5.65625 118.219C3.92708 117.01 2.55208 115.51 1.53125 113.719C0.510417 111.906 0 109.792 0 107.375H7.84375C7.84375 108.854 8.09375 110.115 8.59375 111.156C9.11458 112.198 9.83333 113.052 10.75 113.719C11.6667 114.365 12.7292 114.844 13.9375 115.156C15.1667 115.469 16.4792 115.625 17.875 115.625C19.7083 115.625 21.2396 115.365 22.4688 114.844C23.7188 114.323 24.6562 113.594 25.2812 112.656C25.9062 111.719 26.2188 110.635 26.2188 109.406ZM59.75 75.625V121.125H51.9688V75.625H59.75ZM74.0312 75.625V81.875H37.8125V75.625H74.0312ZM105.562 75.625H113.375V106.031C113.375 109.49 112.625 112.385 111.125 114.719C109.625 117.052 107.583 118.812 105 120C102.438 121.167 99.5729 121.75 96.4062 121.75C93.1354 121.75 90.2188 121.167 87.6562 120C85.0938 118.812 83.0729 117.052 81.5938 114.719C80.1354 112.385 79.4062 109.49 79.4062 106.031V75.625H87.2188V106.031C87.2188 108.219 87.5938 110.021 88.3438 111.438C89.0938 112.833 90.1562 113.865 91.5312 114.531C92.9062 115.198 94.5312 115.531 96.4062 115.531C98.2812 115.531 99.8958 115.198 101.25 114.531C102.625 113.865 103.688 112.833 104.438 111.438C105.188 110.021 105.562 108.219 105.562 106.031V75.625ZM135.125 121.125H125.406L125.469 114.906H135.125C137.938 114.906 140.292 114.292 142.188 113.062C144.104 111.833 145.542 110.073 146.5 107.781C147.479 105.49 147.969 102.76 147.969 99.5938V97.125C147.969 94.6667 147.688 92.4896 147.125 90.5938C146.583 88.6979 145.771 87.1042 144.688 85.8125C143.625 84.5208 142.312 83.5417 140.75 82.875C139.208 82.2083 137.427 81.875 135.406 81.875H125.219V75.625H135.406C138.427 75.625 141.188 76.1354 143.688 77.1562C146.188 78.1562 148.344 79.6042 150.156 81.5C151.99 83.3958 153.396 85.6667 154.375 88.3125C155.354 90.9583 155.844 93.9167 155.844 97.1875V99.5938C155.844 102.865 155.354 105.823 154.375 108.469C153.396 111.115 151.99 113.385 150.156 115.281C148.323 117.156 146.135 118.604 143.594 119.625C141.073 120.625 138.25 121.125 135.125 121.125ZM129.75 75.625V121.125H121.906V75.625H129.75ZM172.094 75.625V121.125H164.25V75.625H172.094ZM218.125 97.125V99.625C218.125 103.062 217.677 106.146 216.781 108.875C215.885 111.604 214.604 113.927 212.938 115.844C211.292 117.76 209.312 119.229 207 120.25C204.688 121.25 202.125 121.75 199.312 121.75C196.521 121.75 193.969 121.25 191.656 120.25C189.365 119.229 187.375 117.76 185.688 115.844C184 113.927 182.688 111.604 181.75 108.875C180.833 106.146 180.375 103.062 180.375 99.625V97.125C180.375 93.6875 180.833 90.6146 181.75 87.9062C182.667 85.1771 183.958 82.8542 185.625 80.9375C187.312 79 189.302 77.5312 191.594 76.5312C193.906 75.5104 196.458 75 199.25 75C202.062 75 204.625 75.5104 206.938 76.5312C209.25 77.5312 211.24 79 212.906 80.9375C214.573 82.8542 215.854 85.1771 216.75 87.9062C217.667 90.6146 218.125 93.6875 218.125 97.125ZM210.281 99.625V97.0625C210.281 94.5208 210.031 92.2812 209.531 90.3438C209.052 88.3854 208.333 86.75 207.375 85.4375C206.438 84.1042 205.281 83.1042 203.906 82.4375C202.531 81.75 200.979 81.4062 199.25 81.4062C197.521 81.4062 195.979 81.75 194.625 82.4375C193.271 83.1042 192.115 84.1042 191.156 85.4375C190.219 86.75 189.5 88.3854 189 90.3438C188.5 92.2812 188.25 94.5208 188.25 97.0625V99.625C188.25 102.167 188.5 104.417 189 106.375C189.5 108.333 190.229 109.99 191.188 111.344C192.167 112.677 193.333 113.688 194.688 114.375C196.042 115.042 197.583 115.375 199.312 115.375C201.062 115.375 202.615 115.042 203.969 114.375C205.323 113.688 206.469 112.677 207.406 111.344C208.344 109.99 209.052 108.333 209.531 106.375C210.031 104.417 210.281 102.167 210.281 99.625Z"
+                        fill="#F5F5F5" />
+                </svg>
+                <div class="footer__copy">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_463)">
+                            <path
+                                d="M5 0.9375C7.25 0.9375 9.0625 2.75 9.0625 5C9.0625 7.25 7.25 9.0625 5 9.0625C2.75 9.0625 0.9375 7.25 0.9375 5C0.9375 2.75 2.75 0.9375 5 0.9375ZM5 0C2.25 0 0 2.25 0 5C0 7.75 2.25 10 5 10C7.75 10 10 7.75 10 5C10 2.25 7.75 0 5 0Z"
+                                fill="#F5F5F5" />
+                            <path
+                                d="M6.1875 6.4375C5.875 6.6875 5.4375 6.875 5 6.875C3.9375 6.875 3.125 6.0625 3.125 5C3.125 3.9375 3.9375 3.125 5 3.125C5.5 3.125 6 3.3125 6.3125 3.6875L7 3C6.5 2.5 5.75 2.1875 5 2.1875C3.4375 2.1875 2.1875 3.4375 2.1875 5C2.1875 6.5625 3.4375 7.8125 5 7.8125C5.6875 7.8125 6.25 7.5625 6.75 7.1875L6.1875 6.4375Z"
+                                fill="#F5F5F5" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_463">
+                                <rect width="10" height="10" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                    <p>2010-2025 Bureau</p>
+                </div>
+            </section>
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="" class="footer__link">About studio</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">PRICES</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">PROJECTS</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">CONTACTS</a>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Interior Design</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Architectural Design</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Author’s Supervision</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Turnkey Projects</a>
+                    </li>
+                </ul>
+
+                <ul class="footer__social">
+                    <li class="footer__social-item">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_480)">
+                                <path
+                                    d="M8.75358 9.19017C8.3804 9.43896 7.94692 9.57047 7.5 9.57047C7.05311 9.57047 6.61963 9.43896 6.24645 9.19017L0.099873 5.09232C0.0657715 5.06959 0.0325488 5.04589 0 5.02151V11.7363C0 12.5061 0.624756 13.1171 1.38085 13.1171H13.6191C14.389 13.1171 15 12.4924 15 11.7363V5.02148C14.9674 5.04592 14.9341 5.06968 14.8999 5.09244L8.75358 9.19017Z"
+                                    fill="#F5F5F5" />
+                                <path
+                                    d="M0.587402 4.36109L6.73397 8.45897C6.96665 8.61409 7.23331 8.69164 7.49997 8.69164C7.76666 8.69164 8.03335 8.61407 8.26603 8.45897L14.4126 4.36109C14.7804 4.11603 15 3.70587 15 3.26319C15 2.50203 14.3808 1.88281 13.6196 1.88281H1.38038C0.619248 1.88284 0 2.50206 0 3.26393C0 3.70587 0.219609 4.11603 0.587402 4.36109Z"
+                                    fill="#F5F5F5" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_480">
+                                    <rect width="15" height="15" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <a href="/" class="footer__social-link">formastudio@gmail.com</a>
+                    </li>
+                    <li class="footer__social-item">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.888 0H4.11202C1.84465 0 0 1.84465 0 4.11205V10.888C0 13.1554 1.84465 15 4.11202 15H10.888C13.1554 15 15 13.1554 15 10.888V4.11205C15 1.84465 13.1554 0 10.888 0ZM7.5 11.6142C5.2314 11.6142 3.38581 9.7686 3.38581 7.5C3.38581 5.2314 5.23143 3.38584 7.5 3.38584C9.76857 3.38584 11.6142 5.23143 11.6142 7.5C11.6142 9.76857 9.76857 11.6142 7.5 11.6142ZM11.8603 4.38973C11.171 4.38973 10.6103 3.82898 10.6103 3.13975C10.6103 2.45051 11.171 1.88974 11.8603 1.88974C12.5495 1.88974 13.1103 2.45048 13.1103 3.13972C13.1103 3.82895 12.5495 4.38973 11.8603 4.38973Z"
+                                fill="#F5F5F5" />
+                        </svg>
+                        <a href="/" class="footer__social-link">formastudio</a>
+                    </li>
+                    <li class="footer__social-item">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0C11.6421 0 15 3.35786 15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0ZM8.42285 3.75C7.06978 3.75001 6.59379 4.43207 6.59375 5.5791V6.42383H5.75V7.83008H6.59375V11.9102H8.28125V7.8291H9.4082L9.55762 6.42285H8.28125L8.2832 5.71973C8.2832 5.35299 8.31896 5.15625 8.8457 5.15625H9.5498V3.75H8.42285Z"
+                                fill="#F5F5F5" />
+                        </svg>
+
+                        <a href="/" class="footer__social-link">forma.studio</a>
+                    </li>
+                    <li class="footer__social-item">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_503)">
+                                <path
+                                    d="M0.264944 7.23097L3.72124 8.52097L5.05904 12.8233C5.14464 13.0989 5.48159 13.2007 5.70524 13.0179L7.63184 11.4473C7.83379 11.2827 8.12144 11.2745 8.33249 11.4277L11.8074 13.9506C12.0466 14.1245 12.3856 13.9934 12.4456 13.7043L14.9911 1.45972C15.0566 1.14392 14.7463 0.880473 14.4456 0.996773L0.260894 6.46882C-0.0891557 6.60382 -0.0861057 7.09942 0.264944 7.23097ZM4.84344 7.83427L11.5983 3.67392C11.7197 3.59937 11.8446 3.76352 11.7404 3.86022L6.16564 9.04222C5.96969 9.22462 5.84329 9.46872 5.80749 9.73367L5.61759 11.141C5.59244 11.3289 5.32849 11.3475 5.27664 11.1657L4.54629 8.59942C4.46264 8.30672 4.58454 7.99407 4.84344 7.83427Z"
+                                    fill="#F5F5F5" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_503">
+                                    <rect width="15" height="15" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <a href="/" class="footer__social-link">@forma.studio</a>
+                    </li>
+                    <li class="footer__social-item">
+                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.49997 0.000209808C3.35787 0.000209808 0 3.37433 0 7.53648C0 10.7292 1.97686 13.4586 4.76679 14.5567C4.70125 13.9604 4.64199 13.0434 4.79279 12.3924C4.92909 11.8043 5.67225 8.64643 5.67225 8.64643C5.67225 8.64643 5.44792 8.19496 5.44792 7.52752C5.44792 6.47961 6.05238 5.69726 6.80501 5.69726C7.44488 5.69726 7.75394 6.17999 7.75394 6.75884C7.75394 7.40545 7.34424 8.3722 7.13282 9.26809C6.95612 10.0182 7.50716 10.6299 8.24344 10.6299C9.57643 10.6299 10.6011 9.21755 10.6011 7.17886C10.6011 5.37442 9.31078 4.11281 7.46831 4.11281C5.3343 4.11281 4.08173 5.72117 4.08173 7.38334C4.08173 8.03107 4.33004 8.72562 4.6399 9.1032C4.70119 9.17783 4.71017 9.24319 4.69191 9.31936C4.63498 9.55739 4.50845 10.0693 4.48362 10.174C4.45091 10.312 4.37492 10.3413 4.23278 10.2748C3.29608 9.83668 2.71043 8.46054 2.71043 7.35523C2.71043 4.97794 4.42939 2.79468 7.66596 2.79468C10.2677 2.79468 12.2896 4.65762 12.2896 7.14729C12.2896 9.74457 10.6598 11.8348 8.39775 11.8348C7.63774 11.8348 6.92329 11.4381 6.67873 10.9695C6.67873 10.9695 6.30266 12.4084 6.21149 12.761C6.04218 13.4156 5.58508 14.2361 5.27934 14.7367C5.98106 14.955 6.72681 15.0728 7.49997 15.0728C11.6421 15.0728 15 11.6986 15 7.53648C15 3.37433 11.6421 0.000209808 7.49997 0.000209808Z"
+                                fill="#F5F5F5" />
+                        </svg>
+                        <a href="/" class="footer__social-link">forma.studio</a>
+                    </li>
+                </ul>
+                <ul class="footer__social">
+                    <li class="footer__social-item">
+                        <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.8303 1.85818C9.63203 0.659912 8.03883 0 6.34424 0C4.64965 0 3.05646 0.659912 1.85821 1.85818C0.659912 3.05648 0 4.64965 0 6.34421C0 9.77232 3.24141 12.6236 4.98281 14.1555C5.22478 14.3684 5.43375 14.5522 5.60019 14.7076C5.80881 14.9026 6.07647 15 6.34421 15C6.61193 15 6.87964 14.9025 7.08824 14.7077C7.25473 14.5522 7.46368 14.3684 7.70564 14.1555C9.44705 12.6237 12.6885 9.77235 12.6885 6.34424C12.6885 4.64965 12.0285 3.05648 10.8303 1.85818ZM6.34424 8.9003C4.80261 8.9003 3.54844 7.64613 3.54844 6.1045C3.54844 4.56287 4.80261 3.3087 6.34424 3.3087C7.88587 3.3087 9.14004 4.56287 9.14004 6.1045C9.14004 7.64613 7.88584 8.9003 6.34424 8.9003Z"
+                                fill="#F5F5F5" />
+                        </svg>
+                        <a href="" class="footer__social-link">Kyiv, 14 <br/>Teatralna Street</a>
+                    </li>
+                    <li class="footer__social-item">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_416_76)">
+                                <path
+                                    d="M2.7966 0.697583C2.56227 0.70467 2.35642 0.828342 2.18411 1.00063L1.89664 1.28764L5.01218 4.45994L5.46445 4.00765C5.73702 3.73509 5.73701 3.28506 5.46445 3.0125L3.45212 1.00063C3.25721 0.805718 3.03092 0.690391 2.7966 0.697583ZM8.19729 1.87907C10.9183 1.87907 13.1196 4.08035 13.1196 6.8014C13.1125 7.12092 13.5955 7.12092 13.5884 6.8014C13.5884 3.82702 11.1717 1.41215 8.18608 1.41215C7.88734 1.44794 7.90767 1.87106 8.19731 1.87907H8.19729ZM1.5643 1.61907L1.23425 1.94866C0.694191 2.48871 0.697755 3.19534 0.697755 3.52151C0.697755 4.87118 1.23733 7.20455 4.51596 10.4832C7.7946 13.7618 10.1284 14.3018 11.4781 14.3018C11.8043 14.3019 12.5109 14.3054 13.051 13.7654L13.3494 13.4669L10.2339 10.2946L9.90704 10.6219C9.71335 10.8156 9.57042 10.8387 9.43143 10.8224C9.29245 10.8061 9.14877 10.7257 9.0437 10.6443C8.47077 10.2008 7.54315 9.56585 6.48846 8.51115C5.43377 7.45647 4.79886 6.52838 4.35529 5.95545C4.27397 5.85038 4.19356 5.70853 4.17722 5.56955C4.16083 5.43057 4.18599 5.28581 4.37955 5.09212L4.6803 4.79137L1.5643 1.61907ZM8.1973 2.81702C7.89163 2.82411 7.89163 3.27902 8.1973 3.28578C10.1417 3.28578 11.7129 4.857 11.7129 6.8014C11.7197 7.10704 12.1749 7.10704 12.1817 6.8014C12.1817 4.60367 10.395 2.81702 8.1973 2.81702ZM8.1973 4.22327C7.88449 4.22327 7.88449 4.69248 8.1973 4.69248C9.36505 4.69248 10.3062 5.63365 10.3062 6.8014C10.3062 7.11421 10.7754 7.11421 10.7754 6.8014C10.7754 5.38032 9.61838 4.22327 8.1973 4.22327ZM8.19729 6.09919C8.5884 6.09919 8.90179 6.4103 8.90179 6.8014C8.89471 7.12092 9.37764 7.12092 9.37054 6.8014C9.37054 6.15697 8.84173 5.62997 8.18608 5.62997C7.8623 5.64512 7.88473 6.11435 8.19731 6.09919H8.19729ZM11.4891 9.33053C11.3085 9.33053 11.1282 9.39885 10.9919 9.53517L10.5653 9.96227L13.6813 13.135L13.999 12.8173C14.1713 12.645 14.2944 12.4373 14.3016 12.203C14.3087 11.9687 14.1939 11.7424 13.999 11.5475L11.9867 9.53517C11.8504 9.39889 11.6696 9.33053 11.4891 9.33053Z"
+                                    fill="#F5F5F5" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_416_76">
+                                    <rect width="15" height="15" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <a href="" class="footer__social-link">+38 (068) 255 45 85</a>
+                    </li>
+
+                    <li class="footer__social-item  footer__social-address">
+                        <p>
+                            Working hours: <br/> Mon–Fri <br/>from 9:00 до 17:00
+                        </p>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

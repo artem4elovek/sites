@@ -1,0 +1,54 @@
+@use './helpers/' as *;
+
+body{
+    display:flex;
+    flex-direction: column;
+    font-family: var(--font-family-base);
+    color: var(--color-light-alt);
+    background-color: var(--color-text);
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+h1,.h1{
+    font-size: 85px;
+    font-weight: 400;
+
+    @include mobile {
+        font-size: 36px;
+    }
+}
+h2,.h2{
+    font-size: 42px;
+    font-weight: 300;
+}
+h3,.h3{
+    font-size: 28px;
+    font-weight: 300;
+}
+h4,.h4{
+    font-size: 24px;
+    font-weight: 300;
+}
+h5,.h5{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}

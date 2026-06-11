@@ -1,0 +1,26 @@
+.button{
+    max-width: 260px;
+    height: 60px;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     width: 100%;
+
+    &--light{
+        color: var(--color-text);
+        background-color: var(--color-light-alt);
+        &-alt{
+            background-color: var(--color-light);
+            border: none;
+            width: 100%;
+        }
+
+    }
+
+    &--dark{
+        color: var(--color-light-alt);
+        background-color: var(--color-text) ;
+    }
+}
