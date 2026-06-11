@@ -1,0 +1,48 @@
+.space {
+    background-color: var(--color-blue) ;
+    margin-top: 60px;
+    padding-top: 60px;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 80px;
+        @include mobile {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+    &__button{
+        margin-top: 30px;
+    }
+    &__teaser {
+       
+        align-items: start;
+        row-gap: 20px;
+    }
+    &__image{
+        position: relative;
+        z-index: 1;
+        img{
+            max-width:  100%;
+            height: auto;
+
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -68px;
+            transform:translateY(-50%);
+            background-color: #09513b;
+            width: 372px;
+            height: 372px;
+            z-index: -1;
+            border-radius: 50%;
+            @include mobile{
+                display: none;
+            }
+
+        }
+    }
+}

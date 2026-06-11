@@ -1,0 +1,21 @@
+@import 'normalize',
+'fonts',
+'variables',
+'mixins',
+'media',
+'globals',
+'utils';
+
+@import'blocks/header',
+'blocks/mobile-overlay',
+'blocks/cross-button',
+'blocks/hero',
+'blocks/button',
+'blocks/advantages',
+'blocks/teaser',
+'blocks/collection',
+'blocks/space',
+'blocks/range',
+'blocks/works',
+'blocks/join',
+'blocks/footer';

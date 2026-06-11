@@ -1,0 +1,15 @@
+.button{
+    background-color: var(--color-primary);
+    border-radius: 50px;
+    color:var(--color-light);
+    padding: 25px 72px;
+
+    @include hover{
+      background-color: var(--color-accent);  
+    }
+
+    @include mobile{
+       @include fluid-text(20,16);
+       padding: 15px 32px;
+    }
+}

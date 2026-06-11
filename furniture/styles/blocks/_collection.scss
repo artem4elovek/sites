@@ -1,0 +1,31 @@
+.collection {
+    &__body {
+
+        display: flex;
+        justify-content: center;
+        padding-top: 84px;
+        column-gap: 40px;
+        overflow: hidden;
+        @include tablet {
+            column-gap: 10px;
+
+        }
+    }
+
+    img:nth-child(1),
+    img:nth-child(3) {
+        margin-top: 38px;
+
+    }
+
+    img {
+        @include tablet {
+            width: 40%;
+            height: auto;
+
+            
+        }
+
+    }
+
+}

@@ -1,0 +1,39 @@
+.footer{
+    background-color: #03344F;
+    color: var(--color-light);
+    padding-top: 50px;
+    padding-bottom: 90px;
+    
+    &__container{
+    display: flex;
+    justify-content: space-between;
+    @include tablet{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 40px;
+    }
+    }
+    
+    &__img-wrapper{
+        margin-top:23px;
+        display: flex;
+        column-gap: 21px;
+        @include mobile{
+            flex-wrap: wrap;
+            row-gap: 10px;
+            justify-content: center;
+        }
+    }
+    &__beauty-title, &__beauty-link,&__shop--title{
+        font-size: 24px;
+      
+    } 
+    &__beauty-description{
+        margin-top: 34px;
+        margin-bottom: 21px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 219%;
+    }
+}

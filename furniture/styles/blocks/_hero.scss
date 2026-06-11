@@ -1,0 +1,51 @@
+.hero {
+    background: url('/img/bg-hero.png') center/cover no-repeat;
+    margin-top: 122pxs;
+    min-height: 749px;
+
+    &__container {
+        display: flex;
+        min-height: 749px;
+        align-items: center;
+        justify-content: end;
+
+        @include mobile {
+            min-height: 590px;
+            justify-content: center;
+        }
+    }
+
+    &__body {
+        background-color: var(--color-banner);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        max-width: 643px;
+        width: 100%;
+        border-radius: 10px;
+        padding: 37px 45px 41px 39px;
+    }
+
+    &__sub-title {
+        @include fluid-text(16, 14);
+        font-weight: 600;
+    
+        letter-spacing: 0.19em;
+        padding-bottom: 20px;
+
+    }
+
+    &__title {
+        
+        @include fluid-text(52, 40);
+        line-height: 125%;
+        color: var(--color-primary);
+    }
+
+    &__description {
+        
+        @include fluid-text(18, 16);
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+}
